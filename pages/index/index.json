@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "抹茶的礼物",
+  "usingComponents": {
+    "wux-icon": "wux-weapp/icon",
+    "wux-button": "wux-weapp/button",
+    "wux-card": "wux-weapp/card/index",
+    "wux-wing-blank": "wux-weapp/wing-blank",
+    "wux-cell-group": "wux-weapp/cell-group",
+    "wux-cell": "wux-weapp/cell",
+    "wux-radio-group": "wux-weapp/radio-group/index",
+    "wux-radio": "wux-weapp/radio/index",
+    "wux-toast": "wux-weapp/toast/index",
+    "wux-input": "wux-weapp/input/index",
+    "wux-dialog": "wux-weapp/dialog/index"
+  }
+}

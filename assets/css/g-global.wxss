@@ -1,0 +1,578 @@
+/**app.wxss**/
+/* page是对小程序进行全局默认样式设置 */
+page {
+  font-size: 32rpx;
+}
+
+/* 全局通用样式 -------------------------------------------------------------- */
+/* padding */
+.g-p--0 {
+  padding: 0 !important;
+}
+
+.g-pt--5 {
+  padding-top: 10rpx !important;
+}
+
+.g-pt--10 {
+  padding-top: 20rpx !important;
+}
+
+.g-pt--15 {
+  padding-top: 30rpx !important;
+}
+
+.g-pt--20 {
+  padding-top: 40rpx !important;
+}
+
+.g-pr--5 {
+  padding-right: 10rpx !important;
+}
+
+.g-pr--10 {
+  padding-right: 20rpx !important;
+}
+
+.g-pr--15 {
+  padding-right: 30rpx !important;
+}
+
+.g-pr--20 {
+  padding-right: 40rpx !important;
+}
+
+.g-pb--5 {
+  padding-bottom: 10rpx !important;
+}
+
+.g-pb--10 {
+  padding-bottom: 20rpx !important;
+}
+
+.g-pb--15 {
+  padding-bottom: 30rpx !important;
+}
+
+.g-pb--20 {
+  padding-bottom: 40rpx !important;
+}
+
+.g-pl--5 {
+  padding-left: 10rpx !important;
+}
+
+.g-pl--10 {
+  padding-left: 20rpx !important;
+}
+
+.g-pl--15 {
+  padding-left: 30rpx !important;
+}
+
+.g-pl--20 {
+  padding-left: 40rpx !important;
+}
+
+/* margin */
+
+.g-mt--5 {
+  margin-top: 10rpx !important;
+}
+
+.g-mt--10 {
+  margin-top: 20rpx !important;
+}
+
+.g-mt--15 {
+  margin-top: 30rpx !important;
+}
+
+.g-mt--20 {
+  margin-top: 40rpx !important;
+}
+
+
+.g-mr--5 {
+  margin-right: 10rpx !important;
+}
+
+.g-mr--10 {
+  margin-right: 20rpx !important;
+}
+
+.g-mr--15 {
+  margin-right: 30rpx !important;
+}
+
+.g-mr--20 {
+  margin-right: 40rpx !important;
+}
+
+
+.g-mb--5 {
+  margin-bottom: 10rpx !important;
+}
+
+.g-mb--10 {
+  margin-bottom: 20rpx !important;
+}
+
+.g-mb--15 {
+  margin-bottom: 30rpx !important;
+}
+
+.g-mb--20 {
+  margin-bottom: 40rpx !important;
+}
+
+
+.g-ml--5 {
+  margin-left: 10rpx !important;
+}
+
+.g-ml--10 {
+  margin-left: 20rpx !important;
+}
+
+.g-ml--15 {
+  margin-left: 30rpx !important;
+}
+
+.g-ml--20 {
+  margin-left: 40rpx !important;
+}
+
+.g-ml--auto {
+  margin-left: auto !important;
+}
+
+.g-mr--auto {
+  margin-right: auto !important;
+}
+
+.g-mt--auto {
+  margin-top: auto !important;
+}
+
+.g-mb--auto {
+  margin-bottom: auto !important;
+}
+
+/* width */
+.g-wh--full {
+  width: 100%;
+}
+
+/* float */
+.g-f--l {
+  float: left;
+}
+
+.g-f--r {
+  float: right;
+}
+
+/* text-align */
+.g-t-a--l,
+.g-ta--l {
+  text-align: left;
+}
+
+.g-t-a--c,
+.g-ta--c {
+  text-align: center;
+}
+
+.g-t-a--r,
+.g-ta--r {
+  text-align: right;
+}
+
+/* vertical-align */
+.g-v-a--t,
+.g-va--t {
+  vertical-align: top;
+}
+
+.g-v-a--m,
+.g-va--m {
+  vertical-align: middle;
+}
+
+/*color--------------------------------------------------------------------------------*/
+.g-c--red {
+  color: #e62b4a !important;
+}
+
+.g-c-blue--light,
+.g-c--blue-light,
+.g-c--blue--light {
+  color: #24adde !important;
+}
+
+.g-c--dark-yellow {
+  color: #f7c35b !important;
+}
+
+.g-c--blue {
+  color: #149EFF !important;
+}
+
+.g-c--dark-blue {
+  color: #73a2e1 !important;
+}
+
+.g-c--light-red {
+  color: #f77766 !important;
+}
+
+.g-c--green {
+  color: #37bf3f !important;
+}
+
+.g-c--orange {
+  color: #ff6600 !important;
+}
+
+.g-c--orange-light {
+  color: #efa46e !important;
+}
+
+.g-c-yellow {
+  color: #ffbf00 !important;
+}
+
+.g-c--gray {
+  color: #999 !important;
+}
+
+.g-c--gray-dark {
+  color: #6E6D6D !important;
+}
+
+.g-c--white {
+  color: #fff !important;
+}
+
+/* display----------------------------------------------------------- */
+.g-d--b {
+  display: block;
+}
+
+.g-d--ib,
+.g-d--i-b {
+  display: inline-block
+}
+
+.g-d--f,
+.g-d--flex {
+  display: flex !important;
+}
+
+.g-d--i-f,
+.g-d--inline-flex {
+  display: inline-flex !important;
+}
+
+/* flex-direction属性决定主轴的方向（即项目的排列方向）。 */
+/* 主轴为水平方向，起点在左端。 */
+.flex-row {
+  flex-direction: row !important;
+}
+
+/* 主轴为水平方向，起点在右端。 */
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+/* 主轴为垂直方向，起点在上沿。 */
+.flex-column {
+  flex-direction: column !important;
+}
+
+/* 主轴为垂直方向，起点在下沿。 */
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+/* justify-content属性定义了项目在主轴上的对齐方式。 */
+/* 左对齐 */
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+
+/* 右对齐 */
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+/* 居中 */
+.justify-content-center {
+  justify-content: center !important;
+}
+
+/* 两端对齐，项目之间的间隔都相等。 */
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+/* 每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。 */
+.justify-content-around {
+  justify-content: space-around !important;
+}
+
+/* align-items属性定义项目在交叉轴上如何对齐。 */
+/* 交叉轴的起点对齐。 */
+.align-items-start {
+  align-items: flex-start !important;
+}
+
+/* 交叉轴的终点对齐。 */
+.align-items-end {
+  align-items: flex-end !important;
+}
+
+/* 交叉轴的中点对齐。 */
+.align-items-center {
+  align-items: center !important;
+}
+
+/* 项目的第一行文字的基线对齐。 */
+.align-items-baseline {
+  align-items: baseline !important;
+}
+
+/* 如果项目未设置高度或设为auto，将占满整个容器的高度。 */
+.align-items-stretch {
+  align-items: stretch !important;
+}
+
+/* 
+align-self属性允许单个项目有与其他项目不一样的对齐方式，
+可覆盖align-items属性。默认值为auto，
+表示继承父元素的align-items属性，
+如果没有父元素，则等同于stretch。 
+*/
+.align-self-start {
+  align-self: flex-start !important;
+}
+
+.align-self-end {
+  align-self: flex-end !important;
+}
+
+.align-self-center {
+  align-self: center !important;
+}
+
+.align-self-baseline {
+  align-self: baseline !important;
+}
+
+.align-self-stretch {
+  align-self: stretch !important;
+}
+
+/* 
+flex属性是flex-grow, 
+flex-shrink 和 flex-basis的简写，
+默认值为0 1 auto。后两个属性可选。
+*/
+/* 自相等 */
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+/* 等宽变化 */
+/* 
+flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+设置为1会自动占满剩余空间
+ */
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+/* flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。 */
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1 !important;
+}
+
+/* 
+Wrap包裹
+改变flex项目在flex容器中的包裹方式（可以实现弹性布局）
+*/
+/* 不换行 */
+.flex-nowrap {
+  -ms-flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
+}
+
+/* 换行，第一行在上方 */
+.flex-wrap {
+  -ms-flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
+}
+
+/* 换行，第一行在下方。 */
+.flex-wrap-reverse {
+  -ms-flex-wrap: wrap-reverse !important;
+  flex-wrap: wrap-reverse !important;
+}
+
+/* order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。 */
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.order-4 {
+  order: 4;
+}
+
+.order-5 {
+  order: 5;
+}
+
+.order-6 {
+  order: 6;
+}
+
+.order-7 {
+  order: 7;
+}
+
+.order-8 {
+  order: 8;
+}
+
+.order-9 {
+  order: 9;
+}
+
+.order-10 {
+  order: 10;
+}
+
+.order-11 {
+  order: 11;
+}
+
+.order-12 {
+  order: 12;
+}
+
+/* align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。 */
+/* 使用flexbox容器上的 align-content 通用样式定义，可以将flex子类 于横轴上 一起对齐，与flex-wrap: wrap配合使用 */
+/* 与交叉轴的起点对齐。 */
+.align-content-start {
+  align-content: flex-start !important;
+}
+
+/* 与交叉轴的终点对齐。 */
+.align-content-end {
+  align-content: flex-end !important;
+}
+
+/* 与交叉轴的中点对齐。 */
+.align-content-center {
+  align-content: center !important;
+}
+
+/* 与交叉轴两端对齐，轴线之间的间隔平均分布。 */
+.align-content-between {
+  align-content: space-between !important;
+}
+
+/* 每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。 */
+.align-content-around {
+  align-content: space-around !important;
+}
+
+/* 轴线占满整个交叉轴。 */
+.align-content-stretch {
+  align-content: stretch !important;
+}
+
+/*font-------------------------------------------------------------------------------------*/
+.g-fs--12 {
+  font-size: 12px !important;
+}
+
+.g-fs--14 {
+  font-size: 14px !important;
+}
+
+.g-fs--16 {
+  font-size: 16px !important;
+}
+
+.g-fs--18 {
+  font-size: 18px !important;
+}
+
+.g-fs--20 {
+  font-size: 20px !important;
+}
+
+.g-fw--600 {
+  font-weight: 600 !important;
+}
+
+/* 其他 ----------------------------------------------------------------- */
+/* 隐藏多余文字，出现省略号 */
+.g-text-overflow--e,
+.g-text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 隐藏 */
+.g-hide,
+.g-hiden {
+  display: none !important;
+}
+
+/* 清除浮动 */
+.clearfix:after,
+.g-clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* 小圆点 */
+.m-dot {
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  text-align: center;
+  background-color: #FF5722;
+  color: #fff;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* 分割线 */
+.g-hr--noline {
+  padding-bottom: 20rpx;
+  width: 100%;
+}

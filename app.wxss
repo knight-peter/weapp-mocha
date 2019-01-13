@@ -1,0 +1,7 @@
+/**app.wxss**/
+@import '/assets/css/g-global.wxss';
+
+.container {
+  height: 100%;
+  box-sizing: border-box;
+}

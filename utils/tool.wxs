@@ -1,0 +1,104 @@
+var tool = {
+  // 测试
+  hello: function (str) {
+    var hello = 'Hello ' + (str || "xuqi's m-utils");
+    return hello;
+  },
+  checkTime: function (i) {
+    if (i < 10) {
+      i = '0' + i;
+    }
+    return i;
+  },
+  formatTime: function (t, type) {
+    // var time = parseInt(t, 10) * 1000;
+    var time = parseInt(t, 10)*1000;
+    var date = getDate(time);
+    if (t == 0) {
+      date = getDate();
+    }
+    var getFullYear = date.getFullYear();
+    var getMonth = tool.checkTime(date.getMonth() + 1);
+    var getDay = tool.checkTime(date.getDate());
+    var getHours = tool.checkTime(date.getHours());
+    var getMinutes = tool.checkTime(date.getMinutes());
+    var getSeconds = tool.checkTime(date.getSeconds());
+
+    if (type === "day") {
+      return getFullYear + "-" + getMonth + "-" + getDay;
+    }
+    return getFullYear + "-" + getMonth + "-" + getDay + " " + getHours + ":" + getMinutes + ":" + getSeconds;
+  },
+  /* 给没有http开头的图片修改成完整的图片地址 */
+  ossUrl: 'http://hanhai-zike.oss-cn-hangzhou.aliyuncs.com/',
+  imgUrl: function (img, size, url) {
+    var newUrl = img;
+    var baseUrl = url || tool.ossUrl;
+    var urlAfter = size || '';
+    if (size === 'sm') {
+      urlAfter = '?x-oss-process=image/resize,w_132,h_132';
+    }
+    if (size === 'lg') {
+      urlAfter = '?x-oss-process=image/resize,w_800,h_800';
+    }
+    if (img.indexOf('http') === -1) {
+      // newUrl=baseUrl+newUrl;
+      newUrl = baseUrl + newUrl + urlAfter;
+    }
+    return newUrl;
+  },
+  /* 给没有http开头的网址添加成完整的网址 */
+  httpUrl: function (url) {
+    var newUrl = url;
+    if (url.indexOf('http') === -1) {
+      // newUrl = 'http://' + newUrl;
+      newUrl = tool.ossUrl + newUrl
+    }
+    return newUrl;
+  },
+  strSubstr: function (str, index) {
+    var num = tool.ossUrl.length;
+    var idx = index || 0;
+    var newStr = str.substr(idx, num)
+  },
+  /* 把图片名称组成的字符串转换成数组Array */
+  strToArr: function (str, separator) {
+    var splitStr = separator || '|';
+    var Arr = [];
+    if (str) {
+      Arr = str.split(splitStr)
+    }
+    return Arr;
+  },
+  /* 把图片名称组成的数组Array转换成字符串String */
+  arrToStr: function (arr, separator) {
+    var splitStr = separator || '|';
+    var Str = arr.join(splitStr);
+    if (arr.length === 1) {
+      Str = arr[0]
+    }
+    if (arr.length === 0) {
+      Str = ''
+    }
+    return Str;
+  },
+  /* 创建数组 */
+  createArr: function (num) {
+    var i, newArr = [];
+    for (i = 0; i < num; i++) {
+      newArr[i] = i;
+    }
+    return newArr;
+  },
+  /* 创建9宫格 */
+  createNineBoxs: function (itemNums) {
+    var item_num = parseInt(itemNums);
+    var numStart = item_num % 3;
+    var numEnd = 3 - numStart;
+    if (numEnd === 3) {
+      return []
+    }
+    return tool.createArr(numEnd);
+  }
+}
+module.exports = tool;

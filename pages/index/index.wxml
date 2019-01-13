@@ -1,0 +1,29 @@
+<!-- index.wxml -->
+<wux-toast id="wux-toast" />
+<wux-dialog id="wux-dialog" />
+<wux-dialog id="wux-dialog--alert" />
+<view class="container">
+  <block wx:for="{{question_arr}}" wx:key="index">
+    <view hidden="{{step!=index}}">
+      <wux-wing-blank size="default">
+        <wux-card>
+          <view slot="body">
+            <wux-radio-group wx:if="{{index!==6}}" title="{{item.question}}" name="q{{index}}" value="{{ question_value }}" bind:change="changeRadio">
+              <block wx:for="{{item.options}}" wx:for-item="option" wx:key="">
+                <wux-radio selectablePrefixCls="wux-selectable" title="{{option}}" value="{{option}}" />
+              </block>
+            </wux-radio-group>
+            <wux-cell wx:if="{{index===6}}" hover-class="none">
+              <wux-input placeholder="请强化记忆手动输入抹茶最喜欢吃的是什么？" bind:change="changeInput" />
+            </wux-cell>
+          </view>
+          <view class="g-wh--full" slot="footer">
+            <wux-button block type="positive" data-index="{{index}}" bind:tap="next">
+              下一个
+            </wux-button>
+          </view>
+        </wux-card>
+      </wux-wing-blank>
+    </view>
+  </block>
+</view>

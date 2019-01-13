@@ -1,0 +1,14 @@
+{
+  "name": "weapp-mocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xuqi",
+  "license": "ISC",
+  "dependencies": {
+    "wux-weapp": "^3.4.0"
+  }
+}
