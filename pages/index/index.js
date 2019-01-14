@@ -74,11 +74,20 @@ Page({
         question: '10、最后要送上一份厚礼，请选择吧：',
         options: ['看抹茶裸照', '看抹茶素颜照', '看抹茶证件照'],
         answer: '看抹茶裸照',
-        toast_arr: ['就知道你觊觎我裸照很久了，送祝福', '素颜你想看就能看？', '还在海马体躺着']
+        toast_arr: ['祝Kris pan 生日快乐，祝愿你每一天都平安喜乐', '素颜你想看就能看？', '还在海马体躺着']
       },
     ]
   },
-  onLoad: function () {},
+  onLoad: function () {
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+  },
+  onShareAppMessage(res) {
+    return {
+      imageUrl: '/assets/image/gift.jpg'
+    }
+  },
   changeRadio(e) {
     const value = e.detail.value
     const index = e.detail.index
@@ -101,8 +110,11 @@ Page({
     const question_value = this.data.question_value
     const answer = question_arr[index].answer
     const toast_arr = question_arr[index].toast_arr
-    const toast_index = toast_arr.indexOf(question_value)
-    const toast_text = toast_arr[0]
+    const toast_index = question_arr[index].options.indexOf(question_value)
+    let toast_text = toast_arr[0]
+    if (this.data.step===9){
+      toast_text = toast_arr[toast_index]
+    }
     if (answer === question_value) {
       this.setData({
         step: index + 1,
@@ -111,8 +123,8 @@ Page({
       if (this.data.step === 10) {
         $wuxDialog().alert({
           resetOnClose: true,
-          title: '比心',
-          content: '就知道你觊觎我裸照很久了，送祝福',
+          title: '生日快乐',
+          content: toast_text,
           onConfirm(e) {
             that.setData({
               step: 0,
